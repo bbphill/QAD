@@ -291,7 +291,7 @@ class QadTextWindow(QDockWidget, Ui_QadTextWindow):
                pt.setX(0)
          
             self.cmdSuggestWindow.move(pt)
-            self.cmdSuggestWindow.resize(200, dataHeight)
+            self.cmdSuggestWindow.resize(200, int(dataHeight))
          
          self.cmdSuggestWindow.show(mode)
       else:
@@ -380,10 +380,10 @@ class QadTextWindow(QDockWidget, Ui_QadTextWindow):
          chronologyEditHeight = 0
       
       self.chronologyEdit.move(0, offsetY)
-      self.chronologyEdit.resize(w, chronologyEditHeight)     
+      self.chronologyEdit.resize(w, int(chronologyEditHeight))     
       self.chronologyEdit.ensureCursorVisible()
       
-      self.edit.resize(w, editHeight)
+      self.edit.resize(w, int(editHeight))
       self.edit.move(0, chronologyEditHeight + offsetY)
       self.edit.ensureCursorVisible()
       
